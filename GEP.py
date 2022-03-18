@@ -32,7 +32,7 @@ class GeneExpressionProgramming():
 
         self.dc_length = self.ntail
         self.const_list = np.random.uniform(const_range[0],const_range[1],self.dc_length)
-        #self.const_list = [6,2,12,4,6,2,12,4,6]
+        #self.const_list = [3.0,1.1,4.0,1.1,4.0,1.1,4.0,1.1]
 
         self.operator_probabilities = operator_probabilities
 
@@ -296,7 +296,6 @@ class GeneExpressionProgramming():
                     elif index >= self.nhead:  # if randomizer picks to mutate tail region
                         chromosome[index] = random.choice(self.term_set)
 
-                    #Mutation for random constant region
                     index_dc = -random.randint(1, self.dc_length)
                     chromosome[index_dc] = str(random.randint(0,self.dc_length-1))
                 new_population.append(chromosome.copy())
