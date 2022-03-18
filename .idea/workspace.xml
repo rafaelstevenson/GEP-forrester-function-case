@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1b7a59e-fe5a-4150-a138-36d5b4ccc00b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/GEP_ForresterCase.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GEP_TransonicAirfoilCase.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fitness Value vs Generation.png" beforeDir="false" afterPath="$PROJECT_DIR$/Fitness Value vs Generation.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GEP.py" beforeDir="false" afterPath="$PROJECT_DIR$/GEP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/implementation_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/implementation_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction_vs_truth.py" beforeDir="false" afterPath="$PROJECT_DIR$/prediction_vs_truth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,9 +24,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.implementation_test">
+  <component name="RunManager" selected="Python.prediction_vs_truth">
     <configuration name="implementation_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GEP_ForresterCase" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -78,8 +72,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.implementation_test" />
         <item itemvalue="Python.prediction_vs_truth" />
+        <item itemvalue="Python.implementation_test" />
       </list>
     </recent_temporary>
   </component>
@@ -104,5 +98,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
