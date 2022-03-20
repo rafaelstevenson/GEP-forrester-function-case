@@ -442,7 +442,7 @@ class GeneExpressionProgramming():
                     first_parent = recombination_pool[0]
                     second_parent = recombination_pool[1]
 
-
+                #Head and tail domain recombination
                 recombination_start_index = random.randint(1, len(chromosome)-2)
                 first_child = first_parent[0:recombination_start_index]
                 second_child = second_parent[0:recombination_start_index]
@@ -454,6 +454,10 @@ class GeneExpressionProgramming():
                     first_child.append(element)
                 for element in first_cross:
                     second_child.append(element)
+
+                #Constant domain recombination
+
+                ######
 
                 new_population.append(first_child.copy())
                 new_population.append(second_child.copy())
