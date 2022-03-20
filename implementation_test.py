@@ -22,10 +22,10 @@ class MinMaxScaler:
 #df['Cd'] = scaler_y.fit_transform(df['Cd'])
 
 
-func_set = ['+','-','*','/','(sin)','(X2)','(sqrt)','(exp)']
+func_set = ['+','-','*','/','(sin)','(X2)']
 
-#term_set = ['a', '?']
-term_set = ['a']
+term_set = ['a', '?']
+#term_set = ['a']
 const_range = [1,15]
 operator_probabilities = {
     "Mutation":0.2, "Inversion":0.1, "IS Transposition":0.1,
@@ -33,9 +33,9 @@ operator_probabilities = {
     "Two-point Recombination":0.3
 }
 
-head_length = 7
-population_size = 50
-generations = 20
+head_length = 12
+population_size = 250
+generations = 200
 fitness_func = 'mse'
 
 GEPProcess = GeneExpressionProgramming(head_length,func_set,term_set,const_range,operator_probabilities)

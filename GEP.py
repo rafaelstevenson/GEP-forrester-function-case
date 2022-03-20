@@ -295,7 +295,7 @@ class GeneExpressionProgramming():
                         chromosome[index] = random.choice(self.func_set + self.func_set)
                     elif index >= self.nhead:  # if randomizer picks to mutate tail region
                         chromosome[index] = random.choice(self.term_set)
-
+                    #Mutation for constant domain
                     index_dc = -random.randint(1, self.dc_length)
                     chromosome[index_dc] = str(random.randint(0,self.dc_length-1))
                 new_population.append(chromosome.copy())
@@ -327,6 +327,21 @@ class GeneExpressionProgramming():
                     for i in range(start_index, end_index + 1):
                         chromosome[i] = inverted_seq[new]
                         new += 1
+
+                    #add inversion for constant domain !!
+                    indexes_dc = sorted(random.sample(range(self.chrom_length, self.chrom_length+self.dc_length), 2))
+                    start_index_dc = indexes_dc[0]
+                    end_index_dc = indexes_dc[1]
+
+                    inverse_seq_dc = chromosome[start_index_dc:end_index_dc + 1]
+                    inverted_seq_dc = []
+                    for element in reversed(inverse_seq_dc):
+                        inverted_seq_dc.append(element)
+                    new_dc = 0
+                    for i in range(start_index_dc, end_index_dc + 1):
+                        chromosome[i] = inverted_seq_dc[new_dc]
+                        new_dc += 1
+
 
                 new_population.append(chromosome.copy())
 

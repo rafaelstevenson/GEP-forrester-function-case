@@ -46,9 +46,9 @@ def EvaluateET(chromosome, variable_dict, const_list):
 
     # Change string to list in each row of ET and change variables to sample value
     expr_tree = ChromToET(chromosome)
+    el_dc = 0
     for i in range(len(expr_tree)):  # iterate rows
         el = 0
-        el_dc = 0
         for element in expr_tree[i]:  # iterate elements in a row
             if element in variable_dict.keys():
                 expr_tree[i][el] = str(variable_dict[element])
