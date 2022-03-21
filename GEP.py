@@ -420,18 +420,18 @@ class GeneExpressionProgramming():
             '''Perform OnePoint Recombination'''
             new_population = []
             recombination_pool = []
-            for chromosome in population:
+            for chromosome in population:  #Choose chromosomes to recombine
                 recombine = random.random() < probability
                 if recombine == True:
                     recombination_pool.append(chromosome.copy())
                 elif recombine == False:
                     new_population.append(chromosome.copy())
 
-            if len(recombination_pool) == 1:
+            if len(recombination_pool) == 1: #If only 1 to recombine, return it
                 new_population.append(recombination_pool[0].copy())
 
             while len(recombination_pool)>1:
-                if len(recombination_pool)>2:
+                if len(recombination_pool)>2: #Determine which chromosome by index to recombine
                     indexes = sorted(random.sample(range(0, len(recombination_pool) - 1), 2))
                     first_parent = recombination_pool[indexes[0]].copy()
                     second_parent = recombination_pool[indexes[1]].copy()
@@ -443,7 +443,8 @@ class GeneExpressionProgramming():
                     second_parent = recombination_pool[1]
 
                 #Head and tail domain recombination
-                recombination_start_index = random.randint(1, len(chromosome)-2)
+                recombination_start_index = random.randint(1, self.chrom_length - 2)
+                #recombination_start_index = random.randint(1, len(chromosome)-2)
                 first_child = first_parent[0:recombination_start_index]
                 second_child = second_parent[0:recombination_start_index]
 
@@ -456,7 +457,17 @@ class GeneExpressionProgramming():
                     second_child.append(element)
 
                 #Constant domain recombination
+                recombination_start_index_dc = random.randint(self.chrom_length+1, self.chrom_length+self.dc_length-2)
+                first_child = first_parent[0:recombination_start_index_dc]
+                second_child = second_parent[0:recombination_start_index_dc]
 
+                first_cross = first_parent[recombination_start_index_dc:]
+                second_cross = second_parent[recombination_start_index_dc:]
+
+                for element in second_cross:
+                    first_child.append(element)
+                for element in first_cross:
+                    second_child.append(element)
                 ######
 
                 new_population.append(first_child.copy())

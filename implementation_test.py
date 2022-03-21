@@ -33,9 +33,9 @@ operator_probabilities = {
     "Two-point Recombination":0.3
 }
 
-head_length = 12
-population_size = 250
-generations = 200
+head_length = 13
+population_size = 60000
+generations = 0
 fitness_func = 'mse'
 
 GEPProcess = GeneExpressionProgramming(head_length,func_set,term_set,const_range,operator_probabilities)
