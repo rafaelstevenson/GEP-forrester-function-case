@@ -28,15 +28,14 @@ term_set = ['a', '?']
 #term_set = ['a']
 const_range = [1,15]
 operator_probabilities = {
-    "Mutation":0.2, "Inversion":0.1, "IS Transposition":0.1,
+    "Mutation":0.1, "Inversion":0.1, "IS Transposition":0.1,
     "RIS Transposition":0.1, "One-point Recombination":0.3,
     "Two-point Recombination":0.3
 }
 
 head_length = 13
-population_size = 300
-generations = 50
-#generations = 200
+population_size = 25000
+generations = 0
 fitness_func = 'mse'
 
 GEPProcess = GeneExpressionProgramming(head_length,func_set,term_set,const_range,operator_probabilities)

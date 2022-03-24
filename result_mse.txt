@@ -1,2 +1,0 @@
-After 20 generations, fittest Chromosome Result:(/a(exp)+(sqrt)*/aaaaaaaa) with fitness value 999.9115622450649
- in list ['/', 'a', '(exp)', '+', '(sqrt)', '*', '/', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a']

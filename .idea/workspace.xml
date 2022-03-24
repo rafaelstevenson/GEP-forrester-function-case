@@ -4,9 +4,12 @@
     <list default="true" id="f1b7a59e-fe5a-4150-a138-36d5b4ccc00b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fitness Value vs Generation.png" beforeDir="false" afterPath="$PROJECT_DIR$/Fitness Value vs Generation.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GEP.py" beforeDir="false" afterPath="$PROJECT_DIR$/GEP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fitness Value vs Generation_mse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSE vs Generation.png" beforeDir="false" afterPath="$PROJECT_DIR$/MSE vs Generation.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/implementation_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/implementation_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prediction_vs_truth.py" beforeDir="false" afterPath="$PROJECT_DIR$/prediction_vs_truth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result_mse.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +18,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="265qz0aADvwhcOJOXUE6AILHhSK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
