@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f1b7a59e-fe5a-4150-a138-36d5b4ccc00b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/implementation_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/implementation_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prediction_vs_truth.py" beforeDir="false" afterPath="$PROJECT_DIR$/prediction_vs_truth.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +33,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.prediction_vs_truth">
+  <component name="RunManager" selected="Python.prediction_vs_truth_one of the best solution">
     <configuration name="implementation_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GEP_ForresterCase" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,9 +99,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.prediction_vs_truth_one of the best solution" />
         <item itemvalue="Python.prediction_vs_truth" />
         <item itemvalue="Python.implementation_test" />
-        <item itemvalue="Python.prediction_vs_truth_one of the best solution" />
       </list>
     </recent_temporary>
   </component>
