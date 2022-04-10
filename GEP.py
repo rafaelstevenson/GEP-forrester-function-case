@@ -603,35 +603,35 @@ Constant list: {self.const_list}
 
             ## Entering new generation process
             # Selection (to choose parents and construct parent populations to reproduce)
-            population = Selection(population, fitness)
+            #population = Selection(population, fitness)
             print(
                 f'--------------------------------------------------------\nGen:{generation + 1}\nSelection from generation {generation} for generation {generation + 1} completed')
             # Replication
-            population = Replication(population)
+            #population = Replication(population)
 
             print(f'Gen:{generation + 1} Reproduction process begin !')
             # Mutation
-            population = Mutation(population, self.operator_probabilities['Mutation'])
+            #population = Mutation(population, self.operator_probabilities['Mutation'])
             print(f'Gen:{generation + 1} Mutation completed')
             # Inversion
-            population = Inversion(population, self.operator_probabilities['Inversion'])
+            #population = Inversion(population, self.operator_probabilities['Inversion'])
             print(f'Gen:{generation + 1} Inversion completed')
             # IS Transposition
-            population = ISTransposition(population, self.operator_probabilities['IS Transposition'])
+            #population = ISTransposition(population, self.operator_probabilities['IS Transposition'])
             print(f'Gen:{generation + 1} IS Transposition completed')
             # RIS Transposition
-            population = RISTransposition(population, self.operator_probabilities['RIS Transposition'])
+            #population = RISTransposition(population, self.operator_probabilities['RIS Transposition'])
             print(f'Gen:{generation + 1} RIS Transposition completed')
             # Gene Transposition
-            population = GeneTransposition(population)
+            #population = GeneTransposition(population)
             # One-point Recombination
-            population = OnePointRecombination(population, self.operator_probabilities['One-point Recombination'])
+            #population = OnePointRecombination(population, self.operator_probabilities['One-point Recombination'])
             print(f'Gen:{generation + 1} One-point Recombination completed')
             # Two-point Recombination
-            population = TwoPointRecombination(population, self.operator_probabilities['Two-point Recombination'])
+            #population = TwoPointRecombination(population, self.operator_probabilities['Two-point Recombination'])
             print(f'Gen:{generation + 1} Two-point Recombination completed')
             # Gene Recombination
-            population = GeneRecombination(population)
+            #population = GeneRecombination(population)
 
             print(f'Gen:{generation + 1} Reproduction process done !')
 
