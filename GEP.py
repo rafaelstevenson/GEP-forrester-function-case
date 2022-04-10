@@ -31,6 +31,7 @@ class GeneExpressionProgramming():
         self.chrom_length = self.nhead + self.ntail
 
         self.dc_length = self.ntail
+        self.total_length = self.chrom_length+self.dc_length
         self.const_list = np.random.uniform(const_range[0],const_range[1],self.dc_length)
         #self.const_list = [3.0,1.1,4.0,1.1,4.0,1.1,4.0,1.1]
 
@@ -520,19 +521,28 @@ class GeneExpressionProgramming():
                     first_parent = recombination_pool[0]
                     second_parent = recombination_pool[1]
 
-                recombination_indexes = sorted(random.sample(range(1, len(chromosome) - 2), 2))
+                recombination_indexes = sorted(random.sample(range(1, self.chrom_length - 2), 2))
+                recombination_indexes_dc = sorted(random.sample(range(self.chrom_length+2, self.total_length - 2), 2))
 
                 recombination_start_index = recombination_indexes[0]
                 recombination_end_index = recombination_indexes[1]
+                recombination_start_index_dc = recombination_indexes_dc[0]
+                recombination_end_index_dc = recombination_indexes_dc[1]
 
-                first_end_original = first_parent[recombination_end_index+1:]
-                second_end_original = second_parent[recombination_end_index+1:]
+                first_end_original = first_parent[recombination_end_index+1:self.chrom_length+1]
+                second_end_original = second_parent[recombination_end_index+1:self.chrom_length+1]
+                first_end_original_dc = first_parent[recombination_end_index_dc+1:]
+                second_end_original_dc = second_parent[recombination_end_index_dc+1:]
 
                 first_child = first_parent[0:recombination_start_index]
                 second_child = second_parent[0:recombination_start_index]
+                first_child_dc = first_parent[self.chrom_length+1:recombination_start_index_dc]
+                second_child_dc = second_parent[self.chrom_length+1:recombination_start_index_dc]
 
                 first_cross = first_parent[recombination_start_index:recombination_end_index+1]
                 second_cross = second_parent[recombination_start_index:recombination_end_index+1]
+                first_cross_dc = first_parent[recombination_start_index_dc:recombination_end_index_dc+1]
+                second_cross_dc = second_parent[recombination_start_index_dc:recombination_end_index_dc+1]
 
 
                 for element in second_cross:
@@ -543,6 +553,20 @@ class GeneExpressionProgramming():
                 for element in first_end_original:
                     first_child.append(element)
                 for element in second_end_original:
+                    second_child.append(element)
+
+                for element in first_child_dc:
+                    first_child.append(element)
+                for element in second_cross_dc:
+                    first_child.append(element)
+                for element in first_end_original_dc:
+                    first_child.append(element)
+
+                for element in second_child_dc:
+                    second_child.append(element)
+                for element in first_cross_dc:
+                    second_child.append(element)
+                for element in second_end_original_dc:
                     second_child.append(element)
 
                 new_population.append(first_child.copy())
@@ -603,35 +627,35 @@ Constant list: {self.const_list}
 
             ## Entering new generation process
             # Selection (to choose parents and construct parent populations to reproduce)
-            #population = Selection(population, fitness)
+            population = Selection(population, fitness)
             print(
                 f'--------------------------------------------------------\nGen:{generation + 1}\nSelection from generation {generation} for generation {generation + 1} completed')
             # Replication
-            #population = Replication(population)
+            population = Replication(population)
 
             print(f'Gen:{generation + 1} Reproduction process begin !')
             # Mutation
-            #population = Mutation(population, self.operator_probabilities['Mutation'])
+            population = Mutation(population, self.operator_probabilities['Mutation'])
             print(f'Gen:{generation + 1} Mutation completed')
             # Inversion
-            #population = Inversion(population, self.operator_probabilities['Inversion'])
+            population = Inversion(population, self.operator_probabilities['Inversion'])
             print(f'Gen:{generation + 1} Inversion completed')
             # IS Transposition
-            #population = ISTransposition(population, self.operator_probabilities['IS Transposition'])
+            population = ISTransposition(population, self.operator_probabilities['IS Transposition'])
             print(f'Gen:{generation + 1} IS Transposition completed')
             # RIS Transposition
-            #population = RISTransposition(population, self.operator_probabilities['RIS Transposition'])
+            population = RISTransposition(population, self.operator_probabilities['RIS Transposition'])
             print(f'Gen:{generation + 1} RIS Transposition completed')
             # Gene Transposition
-            #population = GeneTransposition(population)
+            population = GeneTransposition(population)
             # One-point Recombination
-            #population = OnePointRecombination(population, self.operator_probabilities['One-point Recombination'])
+            population = OnePointRecombination(population, self.operator_probabilities['One-point Recombination'])
             print(f'Gen:{generation + 1} One-point Recombination completed')
             # Two-point Recombination
-            #population = TwoPointRecombination(population, self.operator_probabilities['Two-point Recombination'])
+            population = TwoPointRecombination(population, self.operator_probabilities['Two-point Recombination'])
             print(f'Gen:{generation + 1} Two-point Recombination completed')
             # Gene Recombination
-            #population = GeneRecombination(population)
+            population = GeneRecombination(population)
 
             print(f'Gen:{generation + 1} Reproduction process done !')
 
