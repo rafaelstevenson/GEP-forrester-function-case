@@ -522,22 +522,22 @@ class GeneExpressionProgramming():
                     second_parent = recombination_pool[1]
 
                 recombination_indexes = sorted(random.sample(range(1, self.chrom_length - 2), 2))
-                recombination_indexes_dc = sorted(random.sample(range(self.chrom_length+2, self.total_length - 2), 2))
+                recombination_indexes_dc = sorted(random.sample(range(self.chrom_length+1, self.total_length - 2), 2))
 
                 recombination_start_index = recombination_indexes[0]
                 recombination_end_index = recombination_indexes[1]
                 recombination_start_index_dc = recombination_indexes_dc[0]
                 recombination_end_index_dc = recombination_indexes_dc[1]
 
-                first_end_original = first_parent[recombination_end_index+1:self.chrom_length+1]
-                second_end_original = second_parent[recombination_end_index+1:self.chrom_length+1]
+                first_end_original = first_parent[recombination_end_index+1:self.chrom_length]
+                second_end_original = second_parent[recombination_end_index+1:self.chrom_length]
                 first_end_original_dc = first_parent[recombination_end_index_dc+1:]
                 second_end_original_dc = second_parent[recombination_end_index_dc+1:]
 
                 first_child = first_parent[0:recombination_start_index]
                 second_child = second_parent[0:recombination_start_index]
-                first_child_dc = first_parent[self.chrom_length+1:recombination_start_index_dc]
-                second_child_dc = second_parent[self.chrom_length+1:recombination_start_index_dc]
+                first_child_dc = first_parent[self.chrom_length:recombination_start_index_dc]
+                second_child_dc = second_parent[self.chrom_length:recombination_start_index_dc]
 
                 first_cross = first_parent[recombination_start_index:recombination_end_index+1]
                 second_cross = second_parent[recombination_start_index:recombination_end_index+1]
