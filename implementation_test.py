@@ -34,8 +34,8 @@ operator_probabilities = {
 }
 
 head_length = 13
-population_size = 60000
-generations = 1
+population_size = 250
+generations = 100
 fitness_func = 'mse'
 
 GEPProcess = GeneExpressionProgramming(head_length,func_set,term_set,const_range,operator_probabilities)
