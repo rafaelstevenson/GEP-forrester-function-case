@@ -457,7 +457,7 @@ class GeneExpressionProgramming():
                     second_parent = recombination_pool[1]
 
                 #Head and tail domain recombination
-                recombination_start_index = random.randint(1, self.chrom_length - 2)
+                recombination_start_index = random.randint(1, self.chrom_length+self.dc_length - 2)
                 #recombination_start_index = random.randint(1, len(chromosome)-2)
                 first_child = first_parent[0:recombination_start_index]
                 second_child = second_parent[0:recombination_start_index]
@@ -471,17 +471,21 @@ class GeneExpressionProgramming():
                     second_child.append(element)
 
                 #Constant domain recombination
-                recombination_start_index_dc = random.randint(self.chrom_length+1, self.chrom_length+self.dc_length-2)
-                first_child = first_parent[0:recombination_start_index_dc]
-                second_child = second_parent[0:recombination_start_index_dc]
-
-                first_cross = first_parent[recombination_start_index_dc:]
-                second_cross = second_parent[recombination_start_index_dc:]
-
-                for element in second_cross:
-                    first_child.append(element)
-                for element in first_cross:
-                    second_child.append(element)
+                # recombination_start_index_dc = random.randint(self.chrom_length+1, self.chrom_length+self.dc_length-2)
+                # first_child_dc = first_parent[self.chrom_length:recombination_start_index_dc]
+                # second_child_dc = second_parent[self.chrom_length:recombination_start_index_dc]
+                # for element in first_child_dc:
+                #     first_child.append(element)
+                # for element in second_child_dc:
+                #     second_child.append(element)
+                #
+                # first_cross = first_parent[recombination_start_index_dc:]
+                # second_cross = second_parent[recombination_start_index_dc:]
+                #
+                # for element in second_cross:
+                #     first_child.append(element)
+                # for element in first_cross:
+                #     second_child.append(element)
                 ######
 
                 new_population.append(first_child.copy())
